@@ -6,6 +6,7 @@ This project contains a suite of automated tests for the Pet Routes API using Pl
 
 * Node.js (v14 or higher).
 * Git.
+* Application under test is open and running.
 
 ## How to 
 
