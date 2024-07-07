@@ -12,14 +12,16 @@ This project contains a suite of automated tests for the Pet Routes API using Pl
 
 1. clone the repository from GitHub: https://github.com/MariamIbrahim127/PetTest
     `git clone https://github.com/MariamIbrahim127/PetTest`
-2. Install the dependencies: `npm install`
-3. Install playwright: `npm install @playwright/test`
+2. Install npm:
+     `npm install`
+3. Install playwright: 
+    `npm install @playwright/test`
 4. Run tests by 
     `npx playwright test`
 
 
 ## Documentation
-- Detailed documentation for the test cases and the test results and comments can be found in Test_Cases_Test_Results.docx document.
-- Postman collection used for manual API testing can be found in [PetStore.postman_collection.json] (https://docs.google.com/document/d/1l3vLyJjUPoMymI1k-t7_N1uVqEEsww03DRFp2DnTeJo/edit?usp=sharing)
+- Detailed documentation for the test cases and the test results and comments can be found in [Test_Cases_Test_Results] (https://docs.google.com/document/d/1l3vLyJjUPoMymI1k-t7_N1uVqEEsww03DRFp2DnTeJo/edit?usp=sharing).
+- Postman collection used for manual API testing can be found in PetStore.postman_collection.json 
 - A full test plan and test execution documents activity should be done but for the time limitations it was skipped, only the test cases and test results were done.
  
