@@ -5,18 +5,15 @@ This project contains a suite of automated tests for the Pet Routes API using Pl
 ## Prerequisites
 
 * Node.js (v14 or higher).
-* NPM installed.
-* Playwright.
+* Git.
 
 ## How to 
 
 1. clone the repository from GitHub: https://github.com/MariamIbrahim127/PetTest
     `git clone https://github.com/MariamIbrahim127/PetTest`
 2. Install the dependencies: `npm install`
-3. Build the project: `npm run build`
-4. Run the application: `npm run start`
-5. Install playwright: `npm install @playwright/test`
-6. Run tests by 
+3. Install playwright: `npm install @playwright/test`
+4. Run tests by 
     `npx playwright test`
 
 
