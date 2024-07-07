@@ -10,15 +10,14 @@ This project contains a suite of automated tests for the Pet Routes API using Pl
 
 ## How to 
 
-1. Navigate into a root folder of this project in your terminal
-2. clone the repository from GitHub: https://github.com/MariamIbrahim127/PetTest
-    git clone https://github.com/MariamIbrahim127/PetTest
+1. clone the repository from GitHub: https://github.com/MariamIbrahim127/PetTest
+    `git clone https://github.com/MariamIbrahim127/PetTest`
 2. Install the dependencies: `npm install`
 3. Build the project: `npm run build`
 4. Run the application: `npm run start`
 5. Install playwright: `npm install @playwright/test`
 6. Run tests by 
-    npx playwright test
+    `npx playwright test`
 
 
 ## Documentation
