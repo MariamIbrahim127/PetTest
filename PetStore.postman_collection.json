@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "fe706b13-5950-4f30-be3a-d4377b3df7bc",
+		"name": "PetStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17834034"
+	},
+	"item": [
+		{
+			"name": "1- Add a new pet successfully",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2- Add a new pet with missing category field",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3- Add a new pet with missing age field",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4- Add a new pet with missing avatarUrl field",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": 2,\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5- Add a new pet with missing name field",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6- Add a new pet with invalid data type for age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": \"three\",\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7- Add a new pet with >100 characters for URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMfYdhwZhc-Wan68Z5Xp3IWOQRs3gPjFwCIqnp4hsmDzgho5cXUnOEe5LXS75d1FE4lr0&usqp=CAU\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8- Add a new pet with >50  characters for category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"cat8\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890cat1234567890\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9- Add a new pet with >50 characters for name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"namenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamenamamenamenamenamenamenamenamenamenamenamenamename\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10- Add a new pet with >10 characters for age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"turtle\",\r\n  \"age\": 4300,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"turtle\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11- Add a new pet with an extra field",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\",\r\n    \"extraField\": \"extraValue\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12- Add a new pet with special characters in name & category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test&&***\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat@@##$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13- Add a new pet with empty name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14- Add a new pet with negative age",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"test\",\r\n  \"age\": -6,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15- Get a pet by valid ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "16- Get a pet by invalid ID format",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet/abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "17- Get a pet with non-existing ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "18- Get a pet with ID = 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "19- Get a pet with special characters in ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:3000/api/pet/!@#",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"!@"
+					],
+					"hash": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20- Update an existing pet successfully",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"cat20\",\r\n  \"age\": 5,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"dog\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "21- Update a pet with invalid ID format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"\",\r\n  \"age\": 2,\r\n  \"avatarUrl\": \"https://t4.ftcdn.net/jpg/08/55/83/09/240_F_855830927_LP3sbwxJcAYBwtMlmaF1rOa51gZghYtK.jpg\",\r\n  \"category\": \"cat\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pet/abc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "22- Update a pet with missing required fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "23- Update a pet with empty name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "24- Delete an existing pet successfully",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/4/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"4",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "25- Delete a pet with non-existing ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/18/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"18",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "26- Delete a pet with invalid ID format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/abc/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"abc",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "27- Delete a pet with ID of zero",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/0/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"0",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "28- Delete a pet with very large ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pet/1234567890/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pet",
+						"1234567890",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
