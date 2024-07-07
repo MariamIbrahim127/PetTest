@@ -24,8 +24,8 @@ This document provides an assessment of the pet store application to determine i
 - Add a new pet with an extra field - Passed
 - Add a new pet with special characters in name & category - Passed
 - Add a new pet with empty name - Failed
-- Add a new pet with negative age - Failed
-- Get a pet by valid ID - Passed
+- Add a new pet with negative age - Failed (it supposed to not accept negative values)
+- Get a pet by valid ID - Failed
 - Get a pet by invalid ID format - Failed
 - Get a pet with non-existing ID - Failed
 - Get a pet with ID = 0 - Failed
@@ -56,6 +56,12 @@ This document provides an assessment of the pet store application to determine i
 
 ## Defects
 
+- The Get functionality is failing to work successfully, so all tcs related to it are failing.
+  - Get a pet by valid ID - Failed
+  - Get a pet by invalid ID format - Failed 
+  - Get a pet with non-existing ID - Failed - Returns 201 but should return 400 or 404
+  - Get a pet with ID = 0 - Failed - - Returns 201 but should return 400 or 404
+  - Get a pet with special characters in ID - Failed - Returns 201 but should return 400 or 404
 - The edit functionality is failing to work successfully, so all tcs related to it are failing.
   - Update an existing pet successfully.
   - Update a pet with invalid ID format.
