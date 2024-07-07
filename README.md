@@ -20,6 +20,6 @@ This project contains a suite of automated tests for the Pet Routes API using Pl
 
 ## Documentation
 - Detailed documentation for the test cases and the test results and comments can be found in Test_Cases_Test_Results.docx document.
-- Postman collection used for manual API testing can be found in PetStore.postman_collection.json
+- Postman collection used for manual API testing can be found in [PetStore.postman_collection.json] (https://docs.google.com/document/d/1l3vLyJjUPoMymI1k-t7_N1uVqEEsww03DRFp2DnTeJo/edit?usp=sharing)
 - A full test plan and test execution documents activity should be done but for the time limitations it was skipped, only the test cases and test results were done.
  
